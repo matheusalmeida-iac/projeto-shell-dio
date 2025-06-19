@@ -1,0 +1,42 @@
+#!/bin/bash
+# Diretorios - root ser dono | pasta publica permissão total para todos 
+# Usuarios de cada grupo terão permissão toal no seu diretorio
+# sem permissão de leitura,escrita e execucação em diretorio fora do departamento
+# subir arquivo no github
+
+echo " Criando Diretórios 📦"
+mkdir /home/matheus/DIO/projeto/publico
+mkdir /home/matheus/DIO/projeto/administracao
+mkdir /home/matheus/DIO/projeto/vendas
+mkdir /home/matheus/DIO/projeto/seguranca
+
+echo " Criando Grupos 👥"
+
+groupadd GRP_ADM
+groupadd GRP_VEN
+groupadd GRP_SEG
+
+echo " Criando Usuários 👤"
+
+useradd carlos -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
+useradd maria -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
+useradd joao -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
+useradd debora -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
+useradd sebastiana -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
+useradd roberto -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
+useradd josefina -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEG
+useradd amanda -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEG
+useradd rogerio -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEG
+
+echo "Especificando permissões nos diretorios 📦"
+
+chown root:GRP_ADM /home/matheus/DIO/projeto/administracao
+chown root:GRP_VEN /home/matheus/DIO/projeto/vendas
+chown root:GRP_SEG /home/matheus/DIO/projeto/seguranca
+
+chmod 777 /home/matheus/DIO/projeto/publico
+chmod 770 /home/matheus/DIO/projeto/administracao
+chmod 770 /home/matheus/DIO/projeto/vendas
+chmod 770 /home/matheus/DIO/projeto/seguranca
+
+echo "✅ Script concluído com sucesso!"

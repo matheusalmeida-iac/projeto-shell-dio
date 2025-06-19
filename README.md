@@ -8,6 +8,7 @@ Este projeto foi desenvolvido como parte do curso da DIO (Digital Innovation One
 
 O script realiza a seguinte estrutura de diretórios:
 /home/matheus/DIO/projeto/
+
 ├── publico
 ├── administracao
 ├── vendas
@@ -76,9 +77,4 @@ Todos os usuários criados já possuem diretório home, shell `/bin/bash`, e sen
 📚 Autor
 Desenvolvido por Matheus Almeida 👨🏻‍💻
 Como parte do curso da Digital Innovation One
-
-
----
-
-Se quiser, posso já gerar esse arquivo `README.md` pra você colar direto. Deseja isso?
 

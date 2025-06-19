@@ -10,8 +10,11 @@ O script realiza a seguinte estrutura de diretórios:
 /home/matheus/DIO/projeto/
 
 ├── publico
+
 ├── administracao
+
 ├── vendas
+
 └── seguranca
 
 ---
